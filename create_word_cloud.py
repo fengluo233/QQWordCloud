@@ -35,7 +35,7 @@ def main(input_filename):
     words_stat.columns = ['number']
     words_stat = words_stat.reset_index().sort_values(by="number", ascending=False)
 
-   
+    print('共有不同的词 ：', len(words_stat),'个')
 
     input_prefix = input_filename
     if input_filename.find('.') != -1:
@@ -57,7 +57,14 @@ def main(input_filename):
             bimgColors = ImageColorGenerator(bimg)
             wordcloud.recolor(color_func=bimgColors)
 
-            
+            path = 'out/' + input_prefix[2:]
+            folder = os.path.exists(path)
+            if not folder:
+                os.makedirs(path)   
+
+            output_filename = 'out/' + input_prefix[2:] + '/' + prefix + '_' + input_prefix + '.png'
+
+            print('图片已保存至', output_filename)
             wordcloud.to_file(output_filename)
 
 if __name__ == '__main__':
