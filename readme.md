@@ -1,5 +1,7 @@
 # QQ词云生成工具
 借鉴了网上的一些结果做出来的东西，有很多小bug等待修复
+## 要求
+使用`python3`，并下载`jieba` ,`wordcloud`库
 ## 文件结构
 * data
     * templates
