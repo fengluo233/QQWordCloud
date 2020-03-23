@@ -25,13 +25,13 @@
 ## 使用方法
 运行
 ```python
-python preprocess.py filename.py
+python preprocess.py filename.txt
 ```
-来删除昵称等不需要统计的文字，生成__filename.py
+来删除昵称等不需要统计的文字，生成__filename.txt
 
 运行
 ```
-python create_word_cloud.py __filename.py
+python create_word_cloud.py __filename.txt
 ```
 然后就在 `out` 文件夹里边生成词云了。
 ## 注意
